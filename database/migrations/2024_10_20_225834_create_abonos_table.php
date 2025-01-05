@@ -12,15 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('abonos', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('venta_id');
-            $table->decimal('monto', 10, 2);
-            $table->date('fecha_abono');
-            $table->timestamps();
-        
-            $table->foreign('venta_id')->references('id')->on('ventas');
+            $table->id();  // ID del abono
+            $table->foreignId('venta_id')->constrained('ventas')->onDelete('cascade');  // Relación con la tabla ventas
+            $table->decimal('monto_abono', 10, 2);  // Monto del abono
+            $table->timestamp('fecha_abono')->useCurrent();  // Fecha en que se realiza el abono (por defecto, la fecha y hora actual)
+            $table->timestamps();  // Fechas de creación y actualización
         });
-        
     }
 
     /**

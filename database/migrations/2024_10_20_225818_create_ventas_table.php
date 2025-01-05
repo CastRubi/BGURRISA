@@ -12,14 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('cliente_id');
-            $table->date('fecha_venta');
-            $table->decimal('total', 10, 2);  // Se calculará sumando el total de productos
-            $table->timestamps();
-        
-            // Clave foránea para el cliente
-            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->id();  // ID de la venta
+            $table->foreignId('cliente_id')->constrained('clientes')->onDelete('cascade');  // Relación con la tabla clientes
+            $table->decimal('total_compra', 10, 2);  // Total de la compra
+            $table->decimal('abonos', 10, 2)->default(0);  // Total de los abonos realizados (se actualizará con la lógica)
+            $table->decimal('total_pagar', 10, 2);  // Total a pagar (se actualizará como 'total_compra' - 'abonos')
+            $table->timestamps();  // Fechas de creación y actualización
         });
     }
 

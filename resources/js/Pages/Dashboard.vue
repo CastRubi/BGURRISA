@@ -13,13 +13,17 @@ import Layout from "@/Layouts/Layout.vue";
                 background-position: center;
                 height: 100vh;">
 
-            <!-- Espacio para la frase -->
-            <div class="mb-12 mt-2 text-center">
-                <h2 class="text-4xl font-bold text-black"
-                style="text-shadow: 0 0 4px white"> Protegiendo cada cosecha con calidad y confianza</h2>
-                <hr class="my-5 border-gray-300" style="margin-top: 50px; border-top: 2px solid black"
-                />
-            </div>
+               <!-- Espacio para la frase -->
+<div class="mb-12 mt-2 text-center">
+    <h2
+        class="text-4xl font-bold text-white inline-block px-4 py-2"
+        style="background-color: rgba(34, 197, 94, 0.5); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);"
+    >
+        Protegiendo cada cosecha con calidad y confianza
+    </h2>
+    <hr class="my-5 border-gray-500" style="margin-top: 50px; border-top: 2px solid black;" />
+</div>
+
 
         <!-- Cuadrados de opciones centrados y con espacio -->
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center max-w-4xl mx-auto p-4">
@@ -59,7 +63,7 @@ import Layout from "@/Layouts/Layout.vue";
     </svg>
     <p class="text-2xl font-bold text-black text-center">Abonos</p>
 </a>
-<a href="/abonos" class="flex items-center justify-center h-32 sm:h-40 rounded bg-slate-400 text-white shadow-lg transition-transform transform hover:scale-105">
+<a href="" class="flex items-center justify-center h-32 sm:h-40 rounded bg-slate-400 text-white shadow-lg transition-transform transform hover:scale-105">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-14 w-14 sm:h-16 sm:w-16 mr-2 text-black">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v7.5m2.25-6.466a9.016 9.016 0 0 0-3.461-.203c-.536.072-.974.478-1.021 1.017a4.559 4.559 0 0 0-.018.402c0 .464.336.844.775.994l2.95 1.012c.44.15.775.53.775.994 0 .136-.006.27-.018.402-.047.539-.485.945-1.021 1.017a9.077 9.077 0 0 1-3.461-.203M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
     </svg>
